@@ -1,4 +1,4 @@
-# PROYECTO FINAL - Simulador de batalla Star Wars
+# PROYECTO FINAL (Coderhouse) - Simulador de batalla Star Wars
 
 ## Objetivos Generales:
 1. Codificar la funcionalidad inicial del simulador. 
