@@ -21,7 +21,6 @@ class Campeon {
     this.bando = bando;
   }
   atacar(enemigo) {
-    //Cubrir caso de muerte
     enemigo.vida -= this.daño;
     console.log("Hiciste " + this.daño + " puntos de daño");
     if (enemigo.vida > 0) {
@@ -31,12 +30,11 @@ class Campeon {
         enemigo.nombre +
           " queda fuera de combate, " +
           this.nombre +
-          "es el ganador"
+          " es el ganador!"
       );
     }
   }
   usarHabilidad() {
-    //Cubrir caso de limites
     if (this.bando == "Oscuridad") {
       this.daño += 150;
       console.log("Daño +150");
@@ -50,13 +48,12 @@ class Campeon {
 
   habilidadEspecial() {
     //Si es Darth Vader o Luke, tendria una habilidad especial
-    //TODO: Solucionar undefined
-    if (this.name === "Luke Skywalker") {
+    if (this.nombre == "Luke Skywalker") {
       this.vida += 750;
       console.log("Usaste Habilidad Especial!");
       console.log("Vida +750");
       console.log("Tu vida ascendio a " + this.vida);
-    } else if (this.name === "Darth Vader") {
+    } else if (this.nombre == "Darth Vader") {
       this.daño += 1000;
       console.log("Usaste Habilidad Especial!");
       console.log("LORD ETERNO");
@@ -109,13 +106,15 @@ do {
   break;
 } while (!nombreCampeones.includes(adversarioElegido));
 
+alert("La pelea comienza en...");
 alert("3");
 alert("2");
 alert("1");
 alert("PELEA!");
 
-alert("(El campo de batalla es en la consola...)");
+alert("(El campo de batalla es en la consola)");
 
+//Instrucciones
 console.log(
   "Comandos: 1. Indica el nombre de tu campeon en minusculas, 2. Usa la funcion atacar(nombreAdversario) o usarHabilidad() o la habilidadEspecial() que solo algunos tienen..., 3. Indica el nombre de tu adversario en minusculas, 4. Usa la funcion atacar(nombreDeTuCampeon) o usarHabilidad() o la habilidadEspecial()"
 );
